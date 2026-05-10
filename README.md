@@ -1,6 +1,10 @@
 # AMD Hacks RestorePDF
 
 Local PDF restoration portal for turning damaged scanned PDFs into cleaner black-and-white PDFs with OCR text output.
+Old scanned documents have a yellow tint, random smudges and marks, and general dirt/dust making them unpresentable at best and unreadable at worst. Clean-PDF is a project which tackles this very issue.
+We have already used traditional computer vision models in order to perform the preliminary cleaning and now want to move on to more advanced steps like stamp removal, smudge removal, and general artifact removal, making the pipeline extremely strong and robust.
+
+
 
 ## Run locally
 
