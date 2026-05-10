@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RestorePDF</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="topbar">
+        <div>
+          <h1>RestorePDF</h1>
+          <p>Local archival PDF cleanup, Gemini OCR, and searchable export.</p>
+        </div>
+        <form id="uploadForm" class="upload">
+          <input id="pdfInput" type="file" accept="application/pdf" />
+          <button type="submit">Process PDF</button>
+        </form>
+      </section>
+
+      <section id="status" class="status">Upload a scanned PDF to begin.</section>
+
+      <section id="downloads" class="downloads hidden"></section>
+      <section id="stampReview" class="stamp-review hidden">
+        <button id="stampReviewButton" type="button">Overlapping Stamps</button>
+        <span id="stampReviewSummary"></span>
+      </section>
+
+      <section class="workspace">
+        <aside>
+          <div class="panel-title">Pages</div>
+          <div id="pageList" class="page-list"></div>
+        </aside>
+
+        <section class="viewer">
+          <div class="compare">
+            <figure>
+              <figcaption>Original</figcaption>
+              <img id="originalPreview" alt="" />
+            </figure>
+            <figure>
+              <figcaption>Cleaned</figcaption>
+              <img id="cleanPreview" alt="" />
+            </figure>
+          </div>
+          <div class="ocr">
+            <div class="panel-title">OCR Text</div>
+            <pre id="ocrText"></pre>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
